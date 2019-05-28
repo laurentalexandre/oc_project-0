@@ -16,12 +16,11 @@ public class Product {
 		setDescription(description);
 	}
 
-	//	setInventoryprice(inventoryprice);
-	//}
 
 	public Integer getId() {
 		return id;
 	}
+
 
 	public void setId(Integer id) {
 		this.id = id;
@@ -52,6 +51,9 @@ public class Product {
 	}
 
 	public int getQuantity() {
+		if (quantity < 0) {
+			quantity = 0;
+		}
 		return quantity;
 	}
 
