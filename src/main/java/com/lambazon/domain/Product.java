@@ -62,7 +62,14 @@ public class Product {
 	}
 
 	public double getPrice() {
-		return price;
+	    if (price < 0 || price > 1000) {
+            if (price < 0) {
+                price = 0;
+            } else {
+                price = 1000;
+            }
+        }
+	    return price;
 	}
 
 	public void setPrice(double price) {
