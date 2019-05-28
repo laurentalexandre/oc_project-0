@@ -6,7 +6,7 @@ public class Product {
 	private String name, description, details;
 	private int quantity;
 	private double price;
-	double inventoryprice;
+	public double InventoryPrice;
 
 	public Product(int id, int quantity, double price, String name, String description) {
 		setId(id);
@@ -77,10 +77,11 @@ public class Product {
 	}
 
 	 public double getInventoryPrice() {
-		 return price * quantity;
+		 InventoryPrice = price * quantity;
+		 return InventoryPrice;
 	 }
 
 	 public void setInventoryPrice(double inventoryprice) {
-	 	this.inventoryprice = price * quantity;
+		 	this.InventoryPrice = inventoryprice;
 	 }
 }
